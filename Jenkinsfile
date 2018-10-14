@@ -14,7 +14,8 @@ pipeline {
     
         stage('Deployment') {
             steps {
-                 sh 'cp -r "C:\\Program Files (x86)\\Jenkins\\workspace\\maven in pipe\\multi-module\\webapp\\target\\webapp.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5\\webapps"'
+                  bat 'xcopy /y "C:\\Program Files (x86)\\Jenkins\\workspace\\maven\\multi-module\\webapp\\target\\webapp.war" "C:\\Program Files\\Apache Software Foundation\\Tomcat 8.5_Tomcat8new\\webapps"'
+
             }
         }
     }
